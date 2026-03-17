@@ -4,7 +4,7 @@ date: 2025-03-17
 draft: false
 ---
 
-## ho0*ho0*
+## 전호영
 
 **Backend Developer**
 
@@ -40,4 +40,4 @@ draft: false
 
 ## 연락처
 
-- GitHub: [github.com/ho0*ho0*](https://github.com/ho0_ho0_)
+- GitHub: [github.com/전호영](https://github.com/HoyeongJeon)

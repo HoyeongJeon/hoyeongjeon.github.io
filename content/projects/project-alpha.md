@@ -36,7 +36,7 @@ draft: false
 
 ## 링크
 
-- GitHub: [github.com/ho0*ho0*/project-alpha](https://github.com/ho0_ho0_/project-alpha) _(mock)_
+- GitHub: [github.com/전호영/project-alpha](https://github.com/HoyeongJeon/project-alpha) _(mock)_
 
 ---
 
