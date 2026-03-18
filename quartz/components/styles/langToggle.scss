@@ -1,0 +1,45 @@
+.lang-toggle {
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  background: none;
+  border: none;
+  width: 20px;
+  height: 32px;
+  margin: 0;
+  text-align: inherit;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--darkgray);
+  line-height: 32px;
+
+  & .lang-ko,
+  & .lang-en {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// 기본 (속성 없을 때) = 한국어
+:root:not([saved-lang]) .lang-toggle .lang-en {
+  display: none;
+}
+
+:root[saved-lang="ko"] .lang-toggle .lang-en {
+  display: none;
+}
+
+:root[saved-lang="ko"] .lang-toggle .lang-ko {
+  display: inline;
+}
+
+:root[saved-lang="en"] .lang-toggle .lang-ko {
+  display: none;
+}
+
+:root[saved-lang="en"] .lang-toggle .lang-en {
+  display: inline;
+}

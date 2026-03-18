@@ -23,6 +23,9 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import SidebarNav from "./SidebarNav"
+import BlogList from "./BlogList"
+import LangToggle from "./LangToggle"
 
 export {
   ArticleTitle,
@@ -50,4 +53,7 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  SidebarNav,
+  BlogList,
+  LangToggle,
 }
