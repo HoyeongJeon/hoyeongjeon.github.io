@@ -7,5 +7,4 @@ draft: false
 
 ---
 
-- [[projects/project-alpha|Project Alpha]] — 실시간 알림 서비스
-- [[projects/project-beta|Project Beta]] — 개인 지식 관리 도구
+아직 등록된 프로젝트가 없습니다.
