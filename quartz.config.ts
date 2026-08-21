@@ -20,33 +20,40 @@ const config: QuartzConfig = {
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
+      // weight 는 400/500/600 만 받아온다. Quartz 기본값은 header 에 700 을
+      // 포함시키는데, DESIGN.md §3 이 700 이상을 금지하므로 명시적으로 덮어쓴다.
       typography: {
-        header: "Inter",
-        body: "Inter",
-        code: "JetBrains Mono",
+        header: { name: "Geist", weights: [400, 500, 600] },
+        body: { name: "Geist", weights: [400, 500, 600] },
+        code: { name: "Geist Mono", weights: [400, 500] },
       },
+      // 색상 팔레트는 DESIGN.md §2 기준. 배경·텍스트는 무채색으로만 두고,
+      // accent 는 #0072f5 계열 하나만 사용한다.
       colors: {
         lightMode: {
-          light: "#ffffff",
-          lightgray: "#e2e8f0",
-          gray: "#94a3b8",
-          darkgray: "#334155",
-          dark: "#0f172a",
-          secondary: "#2563eb",
-          tertiary: "#3b82f6",
-          highlight: "rgba(37, 99, 235, 0.08)",
-          textHighlight: "rgba(37, 99, 235, 0.15)",
+          light: "#fafafa", // background primary
+          lightgray: "#ebebeb", // surface hover / 경계선
+          gray: "#8f8f8f", // text muted
+          darkgray: "#4d4d4d", // text secondary (본문)
+          dark: "#171717", // text primary (헤딩)
+          secondary: "#0072f5", // interactive accent
+          tertiary: "#005fcc", // 같은 계열의 어두운 hover 단계
+          highlight: "#f2f2f2", // background recessed
+          textHighlight: "rgba(0, 114, 245, 0.14)",
         },
+        // DESIGN.md 는 light mode 만 정의한다. 아래 값은 같은 규칙
+        // (무채색 + 단일 accent)을 다크에 옮긴 것이며, accent 로 쓴 #52aeff 는
+        // DESIGN.md §2 status 팔레트의 cyan 값이다.
         darkMode: {
-          light: "#0f172a",
-          lightgray: "#1e293b",
-          gray: "#475569",
-          darkgray: "#94a3b8",
-          dark: "#e2e8f0",
-          secondary: "#38bdf8",
-          tertiary: "#60a5fa",
-          highlight: "rgba(56, 189, 248, 0.1)",
-          textHighlight: "rgba(56, 189, 248, 0.15)",
+          light: "#0a0a0a",
+          lightgray: "#2e2e2e",
+          gray: "#8f8f8f",
+          darkgray: "#a1a1a1",
+          dark: "#ededed",
+          secondary: "#52aeff",
+          tertiary: "#8fc9ff",
+          highlight: "#1a1a1a",
+          textHighlight: "rgba(82, 174, 255, 0.18)",
         },
       },
     },

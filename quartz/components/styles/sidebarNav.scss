@@ -21,20 +21,24 @@
     gap: 0.25rem;
   }
 
+  // DESIGN.md §4 — 기본은 transparent, hover 에서 표면색이 채워지고
+  // 텍스트가 secondary → primary 로 승격되는 ghost-first 패턴
   & li a {
     color: var(--darkgray);
     text-decoration: none;
-    font-size: 1rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    border-radius: var(--ds-radius);
     display: block;
+    background-color: transparent;
     transition:
-      color 0.2s ease,
-      background-color 0.2s ease;
+      color var(--ds-duration) ease,
+      background-color var(--ds-duration) ease;
 
     &:hover {
-      color: var(--secondary);
-      background-color: var(--highlight);
+      color: var(--dark);
+      background-color: var(--ds-surface-hover);
     }
   }
 }

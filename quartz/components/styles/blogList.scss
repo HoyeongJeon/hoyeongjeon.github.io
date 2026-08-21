@@ -1,3 +1,5 @@
+// 스타일 기준은 루트의 DESIGN.md.
+// 항목 사이는 구분선 대신 여백으로 나누고(Don't #7), hover 는 표면색으로만 반응한다(Don't #5).
 .blog-list {
   margin-top: 2rem;
 
@@ -7,46 +9,43 @@
     margin: 0;
 
     & > li.blog-list-item {
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--lightgray);
-
-      &:first-child {
-        border-top: 1px solid var(--lightgray);
-      }
-
       &.hidden {
         display: none;
       }
 
       & > a {
         display: block;
+        padding: 1rem;
+        margin: 0 -1rem;
+        border-radius: var(--ds-radius);
         text-decoration: none;
         color: inherit;
         background-color: transparent;
+        transition: background-color var(--ds-duration) ease;
 
-        &:hover h3 {
-          color: var(--secondary);
+        &:hover {
+          background-color: var(--ds-surface-hover);
         }
 
         & > h3 {
           margin: 0 0 0.25rem 0;
-          font-size: 1.1rem;
+          font-size: 1.25rem;
+          font-weight: 600;
+          letter-spacing: -0.03em;
           color: var(--dark);
-          transition: color 0.2s ease;
         }
 
         & > p.meta {
           margin: 0 0 0.5rem 0;
-          font-size: 0.85rem;
-          opacity: 0.6;
-          color: var(--darkgray);
+          font-size: 0.75rem;
+          color: var(--gray);
         }
 
         & > p.description {
           margin: 0;
-          font-size: 0.95rem;
+          font-size: 0.875rem;
           color: var(--darkgray);
-          line-height: 1.6;
+          line-height: 1.5rem;
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
@@ -62,19 +61,20 @@
     margin-top: 1.5rem;
     padding: 0.75rem 1rem;
     background-color: transparent;
-    border: 1px solid var(--lightgray);
-    border-radius: 4px;
+    border: none;
+    box-shadow: var(--ds-border);
+    border-radius: var(--ds-radius);
     color: var(--darkgray);
-    font-size: 0.95rem;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 400;
     cursor: pointer;
     transition:
-      background-color 0.2s ease,
-      border-color 0.2s ease,
-      color 0.2s ease;
+      background-color var(--ds-duration) ease,
+      color var(--ds-duration) ease;
 
     &:hover {
-      background-color: var(--lightgray);
-      border-color: var(--gray);
+      background-color: var(--ds-surface-hover);
       color: var(--dark);
     }
   }

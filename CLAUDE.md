@@ -92,6 +92,18 @@ Quartz 커스터마이징 진입점:
 - 레이아웃: `quartz.layout.ts`
 - 스타일: `quartz/styles/custom.scss`
 
+### 디자인 레퍼런스
+
+UI·스타일 작업은 [DESIGN.md](./DESIGN.md)의 토큰과 규칙을 기준으로 한다. 주요 원칙:
+
+- **색상**: achromatic 기반(`#FAFAFA` / `#171717` / `#4D4D4D`), 인터랙션 accent는 `#0072F5` 하나만 사용
+- **타이포그래피**: font-weight는 400 / 500 / 600만 사용(700 금지), 헤드라인은 negative letter-spacing 적용
+- **경계선**: `border` 대신 `box-shadow: 0 0 0 1px`(shadow-as-border)로 표현
+- **focus**: double-ring 패턴 `0 0 0 2px #FFF, 0 0 0 4px #0072F5`
+- **spacing**: 4px 배수 스케일, radius는 6px(기본) / 12px(카드) / 9999px(pill)
+
+새로운 accent 색상, gradient, divider line, `transform`·`opacity` 기반 hover 애니메이션은 추가하지 않는다.
+
 ## 배포
 
 `main` branch push → GitHub Actions → GitHub Pages 자동 배포.
