@@ -218,12 +218,13 @@
             }
 
             & > ul > li > p {
-              border-radius: 8px;
+              // DESIGN.md §3 — 700 대신 UI 강조용 500 을 쓴다
+              border-radius: var(--ds-radius);
               background-color: var(--highlight);
               padding: 0.2rem 0.4rem;
               margin: 0 0.1rem;
               line-height: 1.4rem;
-              font-weight: $boldWeight;
+              font-weight: 500;
               color: var(--secondary);
 
               &.match-tag {
