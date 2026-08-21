@@ -37,7 +37,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.SidebarNav({
       links: [
         { label: "Blog", href: "" },
-        { label: "Portfolio", href: "portfolio" },
       ],
     }),
     Component.Flex({
@@ -63,7 +62,6 @@ export const defaultListPageLayout: PageLayout = {
     Component.SidebarNav({
       links: [
         { label: "Blog", href: "" },
-        { label: "Portfolio", href: "portfolio" },
       ],
     }),
     Component.Flex({
