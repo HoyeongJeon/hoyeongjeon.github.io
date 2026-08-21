@@ -35,9 +35,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.SidebarNav({
-      links: [
-        { label: "Blog", href: "" },
-      ],
+      links: [{ label: "Blog", href: "" }],
     }),
     Component.Flex({
       components: [
@@ -60,9 +58,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.SidebarNav({
-      links: [
-        { label: "Blog", href: "" },
-      ],
+      links: [{ label: "Blog", href: "" }],
     }),
     Component.Flex({
       components: [

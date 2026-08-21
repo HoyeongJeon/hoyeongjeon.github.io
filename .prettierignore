@@ -1,3 +1,8 @@
 public
 node_modules
 .quartz-cache
+
+# Obsidian 이 관리하는 영역이라 prettier 로 포맷하지 않는다.
+# - 템플릿: prettier 가 <%* 를 <%\* 로 이스케이프해 Templater 문법을 깨뜨린다
+# - 글: Obsidian 이 prettier 규칙을 모르므로 글을 쓸 때마다 check 가 깨진다
+content
