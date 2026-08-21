@@ -109,7 +109,6 @@ h1.article-title {
 // ─────────────────────────────────────────────────────────────
 pre,
 figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title],
-article.about-page details,
 .callout {
   border: none;
   box-shadow: var(--ds-border);
@@ -348,74 +347,4 @@ pre > .clipboard-button:hover {
 
 pre > code [data-highlighted-chars] {
   border-radius: var(--ds-radius);
-}
-
-// ─────────────────────────────────────────────────────────────
-// About / resume 페이지
-// ─────────────────────────────────────────────────────────────
-article.about-page {
-  max-width: 720px;
-  text-align: left;
-
-  // 이름 (h1) — 사진과의 간격 줄이기
-  h1 {
-    margin-top: 0.5rem;
-  }
-
-  // 섹션 제목 — 밑줄 대신 위쪽 여백으로 구분한다
-  h2 {
-    margin-top: 4rem;
-  }
-
-  // 경력/프로젝트 항목 제목
-  h3 {
-    margin-bottom: 0.25rem;
-  }
-
-  // 기간/직함 등 부가 정보
-  h4 {
-    font-weight: 400;
-    color: var(--gray);
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
-  }
-
-  // 리스트 스타일 복원 (가운데 정렬 때 제거했던 것)
-  ul {
-    padding-left: 1.5rem;
-  }
-
-  hr {
-    margin: 3rem 0;
-  }
-
-  // Trouble Shooting 토글
-  details {
-    margin-top: 1rem;
-    border-radius: var(--ds-radius);
-    padding: 0.75rem 1rem;
-
-    summary {
-      cursor: pointer;
-      font-weight: 500;
-      color: var(--dark);
-      transition: color var(--ds-duration) ease;
-
-      &:hover {
-        color: var(--secondary);
-      }
-    }
-
-    &[open] summary {
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.75rem;
-      box-shadow: inset 0 -1px 0 0 var(--ds-border-color);
-    }
-  }
-}
-
-// About 페이지에서 beforeBody 헤더(브레드크럼, 제목, 메타) 숨기기
-.center:has(> article.about-page) > .page-header {
-  display: none;
 }

@@ -16,9 +16,8 @@ Quartz v4 + Obsidian 기반 기술 블로그 + 포트폴리오 사이트. GitHub
 ```
 content/
   blog/       # 기술 블로그 글 (카테고리별 폴더)
-  projects/   # 프로젝트 소개
-  about.md
-  index.md
+  index.md    # 홈 — 블로그 글 목록이 자동으로 렌더링됨
+  robots.txt
 ```
 
 ## 핵심 명령어
@@ -34,7 +33,6 @@ npx quartz sync           # 빌드 + GitHub 배포
 Frontmatter 필수 필드: `title`, `date` (YYYY-MM-DD), `tags`, `draft`
 
 - 블로그 글: `content/blog/<카테고리>/<slug>.md`
-- 프로젝트: `content/projects/<project-name>.md`
 - 초안: `draft: true` (빌드 시 제외)
 
 ### 한/영 이중 언어 작성
